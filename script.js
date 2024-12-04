@@ -1,5 +1,5 @@
 function fetchAllUsers() {
-    fetch('http://127.0.0.1:8000/list_user') // Thay đổi URL theo API của bạn
+    fetch('https://server-user244.vercel.app/list_user') // Thay đổi URL theo API của bạn
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -19,7 +19,7 @@ function fetchAllUsers() {
                     <td>${user.lastname}</td>
                     <td>${user.company}</td>
                     <td>${user.email}</td>
-                    <td>
+                    <td class="d-flex justify-content-center">
                         <button class="btn btn-info showModalBtn" data-id="${user.id}">Show</button>
                     </td>
                 </tr>
@@ -33,7 +33,7 @@ function fetchAllUsers() {
 }
 
 function fetchUser(id) {
-    return fetch(`http://127.0.0.1:8000/user/${id}`,{
+    return fetch(`https://server-user244.vercel.app/user/${id}`,{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ function addUser(){
             password: password
         };
 
-        fetch('http://127.0.0.1:8000/create-user/', { // Thay đổi URL theo API của bạn
+        fetch('https://server-user244.vercel.app/create-user/', { // Thay đổi URL theo API của bạn
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

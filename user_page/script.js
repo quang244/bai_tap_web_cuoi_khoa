@@ -8,7 +8,7 @@ function getParameterByName(name) {
 }
 
 function fetchUser(id) {
-return fetch(`http://127.0.0.1:8000/user/${id}`,{
+return fetch(`https://server-user244.vercel.app/user/${id}`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
