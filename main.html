@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tài khoản đăng nhập sever</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="excel_extract.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="d-flex justify-content-end bg-primary p-1">
+        <div >
+            <a href="#" class="btn btn-link text-white">Home</a>
+            <a href="#" class="btn btn-link text-white">Logout</a>
+        </div>
+    </header>
+
+    <div class="p-5 mt-5 ">
+        <h2 class="text-center">Quản lý tài khoản đăng nhập sever</h2>
+        <div class="d-flex justify-content-between mb-5 ">
+            <button class="btn btn-primary" id="addUserBtn">Add user +</button>
+            <button class="btn btn-success" id="exportBtn">Export to Excel</button>
+        </div>
+
+        <table class="table table-bordered" id="userTable">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Company</th>
+                    <th>Email</th>
+                    <th>Account Information</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Modal show-->
+    <div id="modalShow" class="modal">
+        <div class="modal-content">
+            <table class="table">
+                <tr>
+                    <td class="bg-primary text-white">Email</td>
+                    <td id="email_content" class="w-100"></td>
+                </tr>
+                <tr>
+                    <td class="bg-primary text-white">Username</td>
+                    <td id="username_content"></td>
+                </tr>
+                <tr>
+                    <td class="bg-primary text-white">Password</td>
+                    <td id="password_content"></td>
+                </tr>
+            </table>
+            <div class="modal-footer">
+                <button type="button p-0" class="btn btn-success">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal add-->
+    <div id="modalAdd" class="modal">
+        <div class="modal-content">
+            <div class="text-center text-primary p-2 mb-4 border-bottom border-dark font-">
+                <h5><strong>New User</strong></h2>
+            </div>
+            <table class="table table-bordered border-dark">
+                <tr>
+                    <td>Firstname</td>
+                    <td><input id="firstname" class="w-100 form-control" /></td>
+                </tr>
+                <tr>
+                    <td>Lastname</td>
+                    <td><input id="lastname" class="w-100 form-control"/></td>
+                </tr>
+                <tr>
+                    <td>Company</td>
+                    <td><input id="company" class="w-100 form-control"/></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input id="email" class="w-100 form-control"/></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input id="username" class="w-100 form-control"/></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input id="password" type="password" class="w-100 form-control"/></td>
+                </tr>
+            </table>
+            <div class="modal-footer d-flex justify-content-center">
+                <button id="submit" type="button p-0" class="btn btn-success">Create</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

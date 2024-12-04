@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    height: 95vh; 
+}
+
+.container {
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.main{
+    padding: 0 15%;
+}
+
+h1 {
+    color: white;
+    background-color: #002060;
+}
+
+.profile {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.tag_header{
+    border-bottom: 1px solid blue; /* Gạch chân */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.image {
+    width: 500px;
+    height: 680px;
+    background-color: #ccc;
+    /* margin-right: 20px; */
+}
+
+.info {
+    flex: 1;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    gap: 50px;
+}
+
+.label {
+    text-align: right;
+    width: 100px;
+    font-weight: bold;
+}
+
+
+.info .infor_user {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #000; 
+    outline: none;
+    padding: 1px; 
+    width: 50%;
+    /* width: 100%;  */
+}
+
+@media (max-width: 800px) {
+    body{
+        height: 100%;
+    }
+
+    .main{
+        padding: 0;
+    }
+
+    .row{
+        gap: 50px;
+    }
+
+    .profile {
+        height: 100%;
+        flex-direction: column; 
+    }
+}
