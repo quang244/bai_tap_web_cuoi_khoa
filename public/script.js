@@ -120,7 +120,7 @@ $(document).ready(function() {
         const user_id = $(this).data('id');
         console.log(user_id);
         const baseUrl = window.location.origin;
-        window.open(`${baseUrl}/user_page/user_page.html?user_id=${user_id}`, '_blank');
+        window.open(`${baseUrl}/public/user_page/user_page.html?user_id=${user_id}`, '_blank');
     });
 
     $('#userTable').on('click', '.showModalBtn', function(event) {
