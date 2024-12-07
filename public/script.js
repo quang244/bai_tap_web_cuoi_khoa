@@ -119,7 +119,8 @@ $(document).ready(function() {
         event.preventDefault();
         const user_id = $(this).data('id');
         console.log(user_id);
-        window.open(`http://127.0.0.1:5500/user_page/user_page.html?user_id=${user_id}`, '_blank');
+        const baseUrl = window.location.origin;
+        window.open(`${baseUrl}/user_page/user_page.html?user_id=${user_id}`, '_blank');
     });
 
     $('#userTable').on('click', '.showModalBtn', function(event) {
